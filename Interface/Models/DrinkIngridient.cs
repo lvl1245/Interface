@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Interface;
+namespace Interface.Models;
 
 public partial class DrinkIngridient
 {
