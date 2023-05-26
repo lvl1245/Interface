@@ -15,7 +15,7 @@ public partial class Provider
 
     public string Fax { get; set; } = null!;
 
-    public string PhoneNumber { get; set; } = null!;
+    public string? PhoneNumber { get; set; }
 
     public virtual ICollection<BankDetail> BankDetails { get; } = new List<BankDetail>();
 

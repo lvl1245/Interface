@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Security.Cryptography;
 using System.Text;
+
 using Interface.Models;
 
 namespace Interface
@@ -9,7 +10,7 @@ namespace Interface
     {
         DbBarContext context;
         MD5 md5;
-
+      
         public RegisterForm()
         {
             md5 = MD5.Create();

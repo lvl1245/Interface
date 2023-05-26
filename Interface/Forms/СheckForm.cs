@@ -1,4 +1,7 @@
-﻿using Microsoft.Extensions.Primitives;
+﻿using Interface.Forms;
+
+using Interface.Models;
+using Microsoft.Extensions.Primitives;
 using System.Data.Entity;
 using System.Data.Entity.Core.Metadata.Edm;
 using System.IO;
@@ -26,10 +29,10 @@ namespace Interface
 
             dataGridView1.DataSource = Context.Foods.Local.ToBindingList();
             dataGridView2.DataSource = Context.Drinks.Local.ToBindingList();
-            MainForm.FixTable(ref dataGridView1, 1,3);
+            DataGridFixer.FixTable(dataGridView1, 1,3);
 
-            MainForm.FixTable(ref dataGridView2, 1,3,4,5,7,8,9);
-            MainForm.FixTable(1,ref dataGridView2);
+            DataGridFixer.FixTable(dataGridView2, 1,3,4,5,7,8,9);
+            DataGridFixer.FixTable(1,dataGridView2);
             DataGridViewButtonColumn buttonColumn1 =
             new DataGridViewButtonColumn();
             buttonColumn1.HeaderText = "Add";

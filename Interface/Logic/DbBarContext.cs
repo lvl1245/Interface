@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using Interface.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace Interface;
+namespace Interface.Models;
 
 public partial class DbBarContext : DbContext
 {
@@ -205,7 +204,7 @@ public partial class DbBarContext : DbContext
             entity.Property(e => e.Adress).HasMaxLength(30);
             entity.Property(e => e.Email).HasMaxLength(30);
             entity.Property(e => e.Fax).HasMaxLength(30);
-            entity.Property(e => e.PhoneNumber).HasMaxLength(1);
+            entity.Property(e => e.PhoneNumber).HasMaxLength(13);
             entity.Property(e => e.ProvideName).HasMaxLength(30);
         });
 

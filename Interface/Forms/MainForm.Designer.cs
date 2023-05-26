@@ -41,6 +41,7 @@ namespace Interface
             this.ButtonAdd = new System.Windows.Forms.Button();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+            this.button1 = new System.Windows.Forms.Button();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.Check = new System.Windows.Forms.Button();
@@ -63,7 +64,7 @@ namespace Interface
             // 
             // employeeBindingSource
             // 
-            this.employeeBindingSource.DataSource = typeof(Employee);
+            this.employeeBindingSource.DataSource = typeof(Interface.Models.Employee);
             // 
             // dataGridView1
             // 
@@ -105,6 +106,8 @@ namespace Interface
             this.dataGridView1.RowTemplate.Height = 29;
             this.dataGridView1.Size = new System.Drawing.Size(931, 581);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            this.dataGridView1.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellValueChanged);
             // 
             // buttonNext
             // 
@@ -172,6 +175,7 @@ namespace Interface
             // splitContainer2.Panel1
             // 
             this.splitContainer2.Panel1.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.splitContainer2.Panel1.Controls.Add(this.button1);
             this.splitContainer2.Panel1.Controls.Add(this.listBox1);
             this.splitContainer2.Panel1.Controls.Add(this.textBox1);
             this.splitContainer2.Panel1.Controls.Add(this.Check);
@@ -191,13 +195,25 @@ namespace Interface
             this.splitContainer2.SplitterDistance = 317;
             this.splitContainer2.TabIndex = 8;
             // 
+            // button1
+            // 
+            this.button1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.button1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.button1.Location = new System.Drawing.Point(0, 241);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(466, 38);
+            this.button1.TabIndex = 11;
+            this.button1.Text = "Create price list";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 20;
             this.listBox1.Location = new System.Drawing.Point(9, 144);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(288, 104);
+            this.listBox1.Size = new System.Drawing.Size(288, 84);
             this.listBox1.TabIndex = 10;
             this.listBox1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.listBox1_MouseDoubleClick);
             // 
@@ -316,5 +332,6 @@ namespace Interface
         private Button Check;
         private TextBox textBox1;
         private ListBox listBox1;
+        private Button button1;
     }
 }
