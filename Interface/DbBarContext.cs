@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Interface.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace Interface;

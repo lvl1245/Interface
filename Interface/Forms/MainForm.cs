@@ -1,18 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata;
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Data.Entity;
-using System.Data.Entity.Core.Metadata.Edm;
-using System.Data.Entity.Core.Objects;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+using Interface.Models;
+
 
 namespace Interface
 {
@@ -37,6 +26,7 @@ namespace Interface
             Users,
             BankDetails
         }
+
         private LinkedList<TableState> EnabledStates = new LinkedList<TableState>();
 
         private TableState tableState { get; set; }

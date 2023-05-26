@@ -1,4 +1,6 @@
-﻿namespace Interface
+﻿using Interface.Models;
+
+namespace Interface
 {
     partial class MainForm
     {
@@ -61,7 +63,7 @@
             // 
             // employeeBindingSource
             // 
-            this.employeeBindingSource.DataSource = typeof(Interface.Employee);
+            this.employeeBindingSource.DataSource = typeof(Employee);
             // 
             // dataGridView1
             // 
